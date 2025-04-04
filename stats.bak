@@ -1,0 +1,30 @@
+def get_word_count(text):
+    word_count = 0
+    input_text = text.split()
+    for word in input_text:
+        word_count += 1
+    return word_count
+
+
+def char_count(text):
+    chars = set()
+    for char in text:
+        chars.add(char)
+
+    char_count = {}
+    for char in chars:
+        count = 0
+        for text_char in text:
+            if text_char == char or text_char.lower() == char:
+                count += 1
+        char_count[char] = count
+    return char_count
+
+    char_counts = {}
+    for char in text:
+        char = char.lower()
+        if char in char_counts:
+            char_counts[char] += 1
+        else:
+            char_counts[char] = 1
+    return char_counts
